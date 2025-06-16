@@ -1,20 +1,63 @@
-import React from "react";
-import TodoProvider from "./context/TodoContext";
-import TodoForm from "./components/TodoForm";
-import TodoItem from "./components/TodoItem";
+import React from 'react';
+import './styles.scss';
 
-function App() {
+const App = () => {
   return (
-    <TodoProvider>
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-400 to-purple-600">
-        <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
-          <h1 className="text-3xl font-bold text-center mb-4">Todo App</h1>
-          <TodoForm />
-          <TodoItem />
+    <div className="container">
+      {/* Header */}
+      <header className="header">
+        <div className="logo">Product</div>
+        <nav>
+          <a href="#">Product</a>
+          <a href="#">Customers</a>
+          <a href="#">Pricing</a>
+          <a href="#">Resources</a>
+          <a href="#">Sign In</a>
+          <button className="sign-up">Sign Up</button>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="hero">
+        <h1>Work at the speed of thought</h1>
+        <p>
+          Tools, tutorials, design and innovation experts, all in one place! The
+          most intuitive way to imagine your next user experience.
+        </p>
+        <div className="cta-buttons">
+          <button className="get-started">Get Started</button>
+          <a href="#" className="watch-video">Watch the Video</a>
         </div>
-      </div>
-    </TodoProvider>
+        <div className="hero-image">
+          <img src="https://via.placeholder.com/400x600" alt="Hero Image" />
+          <div className="people">
+            <img src="https://via.placeholder.com/400x200" alt="People Group" />
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="features">
+        <h2>Product was Built Specifically for You</h2>
+        <div className="feature-item">
+          <img src="https://via.placeholder.com/50" alt="Icon 1" />
+          <p>First click tests</p>
+        </div>
+        <div className="feature-item">
+          <img src="https://via.placeholder.com/50" alt="Icon 2" />
+          <p>Design surveys</p>
+        </div>
+        <div className="feature-item">
+          <img src="https://via.placeholder.com/50" alt="Icon 3" />
+          <p>Preference tests</p>
+        </div>
+        <div className="feature-item">
+          <img src="https://via.placeholder.com/50" alt="Icon 4" />
+          <p>Five second tests</p>
+        </div>
+      </section>
+    </div>
   );
-}
+};
 
 export default App;
